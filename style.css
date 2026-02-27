@@ -249,7 +249,7 @@ nav.aboutNav li a:hover {
     
   }
   nav.galleryNav li a {
-    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-size: clamp(1.2rem, 5vmin, 2rem);
   }
 
 }
@@ -277,10 +277,10 @@ nav.aboutNav li a:hover {
 .aboutText{
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-size: clamp(1rem, 1.2vmin, 1.2rem);
 }
 .aboutText p{
-  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  font-size: clamp(1.1rem, 1.6vmin, 1.6rem);
   line-height: 1.6;
 }
 
