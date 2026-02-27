@@ -208,6 +208,9 @@ nav.aboutNav li a {
   font-size: clamp(1.2rem, 5vw, 2rem);
   text-decoration: none;
 }
+nav.aboutNav li a:hover {
+  color: rgb(3, 3, 180);
+}
 
 /* Responsive breakpoints */
 @media (max-width: 900px) {
