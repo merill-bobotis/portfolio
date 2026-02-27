@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin:0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+main.mainHome {
+  flex: 1;                  /* pushes footer down */
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  text-align: center;
+}
+header{
+  text-align: center;
+  font-size: clamp(1.5rem, 6vw, 2rem);
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  
+ 
+}
+
+nav.mainNav {
+    width: 60vw;        /* 60% of viewport width */
+    max-width: 1200px;  /* optional cap for huge screens */
+}
+h2{
+  text-align: left;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  
+}
+
+
+
+nav.mainNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+nav.mainNav li a {
+
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  transform: scaleX(1.1);   /* wider */
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1;
+}
+
+nav.mainNav li a:hover {
+  color: rgb(3, 3, 180);
+}
+
+a:visited {
+    color: white; 
+  }
+
+
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: clamp(0.3rem, 5vh, 0.8rem);
+}
+
+footer hr {
+    border: 0;
+    height: 1px;
+    background: white;    /* line color */
+    margin-bottom: 15px;
+    opacity: 0.5;         
+}
+
+
+
+
+/* Gallery page layout */
+
+.gallery-page {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding:0 0 3rem 0;
+  text-align: left;
+}
+
+/* Title */
+.title {
+  text-align:center;
+  width:100%;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  margin-bottom: 1.5rem;
+}
+
+/*nav bar for gallery page*/
+nav.galleryNav {
+  width: 20%;
+  float:left;
+  max-width: 900px;
+  position:fixed;
+  top:35%;
+ 
+  
+
+}
+
+nav.galleryNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  /*text-shadow: 
+  1px 1px 0 #000, 
+ -1px 1px 0 #000, 
+  1px -1px 0 #000, 
+ -1px -1px 0 #000;*/
+}
+
+
+nav.galleryNav li a {
+
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  transform: scaleX(1.1);   /* wider */
+  font-size: clamp(1rem, 6vw, 3.5rem);
+  line-height: 1;
+}
+
+nav.galleryNav li a:hover {
+  color: rgb(3, 3, 180);
+}
+
+a:visited {
+    color: white; 
+  }
+
+
+/* Responsive grid */
+.gallery {
+  width:80%;
+  float:right;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 2%;
+}
+
+/* Images */
+.gallery img {
+  width: 100%;
+  height: 320px;          /* adjust to taste */
+  object-fit: cover;
+  display: block;
+}
+nav.aboutNav{
+ 
+  position:sticky;
+  width:100%;
+  float:none;
+  top:0;
+  left:0; 
+  text-align:center;
+  background: black;
+  padding: 0.8rem 0;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  
+
+}
+
+nav.aboutNav ul{
+  display: flex;
+  flex-direction: row;   /* horizontal nav on mobile */
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  list-style: none;
+  
+}
+nav.aboutNav li a {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  text-decoration: none;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery img { height: 280px; }
+  nav.galleryNav {float:none;}
+  .aboutPage{grid-template-columns: 1fr;}
+}
+
+@media (max-width: 520px) {
+  .layout{
+    position:relative;
+  }
+  .gallery {
+    width: 100%;
+    float: none;
+    grid-template-columns: 1fr;
+  }
+  .gallery img { height: auto; }
+  nav.galleryNav {
+  position:sticky;
+  width:100%;
+  float:none;
+  top:0;
+  left:0; 
+  text-align:center;
+  background: black;
+  padding: 0.8rem 0;
+  }
+  nav.galleryNav ul{
+    flex-direction: row;   /* horizontal nav on mobile */
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    
+  }
+  nav.galleryNav li a {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+}
+/*about page*/
+
+.aboutPage{
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 2%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.aboutImage img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.aboutText{
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+.aboutText p{
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  line-height: 1.6;
+}
+
+
